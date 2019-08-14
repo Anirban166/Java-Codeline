@@ -1,4 +1,5 @@
-Node Delete(Node head, int position) {
+Node Delete(Node head, int position) 
+{
     if (head == null) {
         return null;
     } else if (position == 0) {
