@@ -16,6 +16,10 @@
    import package->all contents/classes like import java.util.*;
 -> Class names preferred with uppercased initial whereas packages prefer lowercased initial.
 -> Escape characters: \n (newline) \t (tab space) \b (backspace) \r (return items to the left of r in a new line)
+-> Encapsulation: Declare class variables as private, provide public getters and setters to acces and update those attributes.
+   Eg: public class xyz { private int tip;
+   //getter: public int getTip() { return x; } //getter format: public return type get'varname'() ; with initial letter in caps.
+   //setter: void setTip(int newtip) { this.tip=newtip; } //setter format: void set'varname'(return type new'varname') ; initial caps.
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -88,3 +92,20 @@ public class Car
                  Maths.toRadians(value); 
 (i) Logarithm: Maths.log(x); //natural log. 
                Maths.log10(x); //base10 log.
+
+----------
+(6) Arrays:
+----------
+Syntax: data_type[] name; 
+        data_type[] name={element1,element2};
+	data_type[][] name={{element11,elements12},{element21,element22}};
+	Eg:
+	int[][] numlist={{1,2,3},{4,5,6,7,8}};
+	String[] housetype={"Flat","Bungalow"};
+	print(housetype.length+housetype[0]); //2Flat
+	for(int i=0; i<housetype.length; i++) //Syntax like for(loop variable initially 0, till length of string (no.), inc/dec)
+	{ print(cars[i]); }
+	or
+	for(String i:housetype) //'For each' i in string housetype.
+	{ print(i);
+	}
