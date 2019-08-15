@@ -14,6 +14,7 @@
    import package->class like import java.util.Scanner;
    or 
    import package->all contents/classes like import java.util.*;
+-> Class names preferred with uppercased initial whereas packages prefer lowercased initial.
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -55,3 +56,19 @@ print(abc.concat(abc2));
 String mergedstring=abc+abc2;
 print(mergedstring);
 
+---------------
+(4) Constructor:
+---------------
+Just like C++, with default and parameterized variants. (can use this pointer too)
+Eg:
+public class Car
+{ int id;
+  String model;
+  public Car() { id=0; model="NULL"; } //Default con.
+  public Car(int i,String m) { id=i; model=m; } //Parameterized con.
+  public static void main(String args[])
+  { Car Fordcar=new Car(1,"Mustang");
+   print(Fordcar.id+Fordcar.model);
+  }
+}
+  
