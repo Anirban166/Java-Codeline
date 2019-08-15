@@ -1,4 +1,4 @@
-(1) Basics:
+(1) Random:
 -----------
 -> Println terminates current line, or adds an end-of-line character, whereas Print doesn't. 
 -> 'Char' data type here refers to only alphabet ('a','@'..etc) whereas names etc are defined by 'String'. (S capital always)
@@ -72,4 +72,19 @@ public class Car
    print(Fordcar.id+Fordcar.model);
   }
 }
-  
+
+----------
+(5) Maths:
+----------
+(a) Max/Min: Eg: print(Math.max(5,3)+" "+Math.min(5,10)); //5 5
+(b) Square root: Eg: print(Math.sqrt(36)); //6
+(c) Absolute value: Eg: print(Math.abs(-36.6)); //36.6
+(d) Random value: Eg: print(Maths.random()); //Any random value between 0 and 1. (inclusive of them)
+(e) Trigonometry: Eg: print(Maths.cos(60)); //returns cosine(60) value.
+//normal - cos(60) ; //hyperbolic - cosh(60) ; //arc - acos(60)
+(f) Round-off: Eg: print(Maths.round(5.5)); //6 
+(g) Cieling/Floor: Eg: print(Maths.ceil(5.5)); //6.0 ; print(Maths.floor(5.5)); //5.0
+(h) Conversions: Maths.toDegrees(value); 
+                 Maths.toRadians(value); 
+(i) Logarithm: Maths.log(x); //natural log. 
+               Maths.log10(x); //base10 log.
