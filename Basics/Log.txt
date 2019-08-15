@@ -9,7 +9,7 @@
     Eg: Public class Mathematics { final double pi=3.14; }
 -> Comments: (a)// valid (b)/* valid */ (c)/** valid */ (javadocs)
 -> Shortcut assignment works. Eg: x^=3 ; x%=3 ; x&=3 etc.
-->
+-> 
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -30,3 +30,16 @@ public class temp
 	{	myfunc("hi"); //simple function call.
 	}
 }
+------------
+(3) Strings:
+------------
+Eg: String abc="xyz";
+
+(a) Length: 
+print(abc.length()); //3
+
+(b) Upper/Lower case: 
+print(abc.toUpperCase()); //XYZ
+print(abc.toLowerCase()); //xyz
+
+(c)
