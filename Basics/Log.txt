@@ -42,4 +42,8 @@ print(abc.length()); //3
 print(abc.toUpperCase()); //XYZ
 print(abc.toLowerCase()); //xyz
 
-(c)
+(c) Index positions:
+print(abc.indexOf("z")); //2 (count from 0 -> array)
+
+(d) Concat: (take another string. Eg: String xyz2=
+print(
