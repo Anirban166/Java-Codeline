@@ -5,9 +5,9 @@
 -> Typecasting is done like:
    double var = 5.5;
    int newvar = (int) var; // typecast double type into int for var. // print(newvar) -> 5 ; print(var) -> 5.5
--> 'Final' keyword is used to avoid changes.
-    Eg:
-->
+-> 'final' keyword is used to avoid changes. (constant value)
+    Eg: Public class Mathematics { final double pi=3.14; }
+-> 
 ->
 ->
 ----------------------
