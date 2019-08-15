@@ -9,7 +9,7 @@
     Eg: Public class Mathematics { final double pi=3.14; }
 -> Comments: (a)// valid (b)/* valid */ (c)/** valid */ (javadocs)
 -> Shortcut assignment works. Eg: x^=3 ; x%=3 ; x&=3 etc.
--> 
+-> Can concat strings with + directly on assignment.
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -45,5 +45,8 @@ print(abc.toLowerCase()); //xyz
 (c) Index positions:
 print(abc.indexOf("z")); //2 (count from 0 -> array)
 
-(d) Concat: (take another string. Eg: String xyz2=
-print(
+(d) Concat: (take another string. Eg: String abc2="xyz2";)
+print(abc.concat(abc2));
+or
+String mergedstring=abc+abc2;
+print(mergedstring);
