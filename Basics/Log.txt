@@ -1,0 +1,21 @@
+
+----------------------
+(2) Methods/Functions:
+----------------------
+public class temp 
+{ static int myfunc(int x,int y) //need static call as main is static. 2 args based function with int return type.
+  { return x+y+3;
+  }
+	public static void main(String args[])
+	{	System.out.print(myfunc(3,3)); //3+3+3=9
+	}
+}
+---------------------
+public class temp 
+{  static void myfunc(String x) //return void as we print in-function.
+	 { System.out.print(x);
+	 }
+	public static void main(String args[])
+	{	myfunc("hi"); //simple function call.
+	}
+}
