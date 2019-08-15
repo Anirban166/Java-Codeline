@@ -7,8 +7,8 @@
    int newvar = (int) var; // typecast double type into int for var. // print(newvar) -> 5 ; print(var) -> 5.5
 -> 'final' keyword is used to avoid changes. (constant value)
     Eg: Public class Mathematics { final double pi=3.14; }
--> 
-->
+-> Comments: (a)// valid (b)/* valid */ (c)/** valid */ (javadocs)
+-> Shortcut assignment works. Eg: x^=3 ; x%=3 ; x&=3 etc.
 ->
 ----------------------
 (2) Methods/Functions:
