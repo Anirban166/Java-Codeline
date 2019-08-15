@@ -10,6 +10,10 @@
 -> Comments: (a)// valid (b)/* valid */ (c)/** valid */ (javadocs)
 -> Shortcut assignment works. Eg: x^=3 ; x%=3 ; x&=3 etc.
 -> Can concat strings with + directly on assignment.
+-> import packages like:
+   import package->class like import java.util.Scanner;
+   or 
+   import package->all contents/classes like import java.util.*;
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -47,6 +51,7 @@ print(abc.indexOf("z")); //2 (count from 0 -> array)
 
 (d) Concat: (take another string. Eg: String abc2="xyz2";)
 print(abc.concat(abc2));
-or
+//or add directly:
 String mergedstring=abc+abc2;
 print(mergedstring);
+
