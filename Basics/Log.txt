@@ -15,6 +15,7 @@
    or 
    import package->all contents/classes like import java.util.*;
 -> Class names preferred with uppercased initial whereas packages prefer lowercased initial.
+-> Escape characters: \n (newline) \t (tab space) \b (backspace) \r (return items to the left of r in a new line)
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -57,7 +58,7 @@ String mergedstring=abc+abc2;
 print(mergedstring);
 
 ---------------
-(4) Constructor:
+(4) Constructors:
 ---------------
 Just like C++, with default and parameterized variants. (can use this pointer too)
 Eg:
