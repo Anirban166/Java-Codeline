@@ -1,4 +1,15 @@
-
+(1) Basics:
+-----------
+-> Println terminates current line, or adds an end-of-line character, whereas Print doesn't. 
+-> 'Char' data type here refers to only alphabet ('a','@'..etc) whereas names etc are defined by 'String'. (S capital always)
+-> Typecasting is done like:
+   double var = 5.5;
+   int newvar = (int) var; // typecast double type into int for var. // print(newvar) -> 5 ; print(var) -> 5.5
+-> 'Final' keyword is used to avoid changes.
+    Eg :
+->
+->
+->
 ----------------------
 (2) Methods/Functions:
 ----------------------
