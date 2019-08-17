@@ -20,6 +20,7 @@
    Eg: public class xyz { private int tip;
    //getter: public int getTip() { return x; } //getter format: public return type get'varname'() ; with initial letter in caps.
    //setter: void setTip(int newtip) { this.tip=newtip; } //setter format: void set'varname'(return type new'varname') ; initial caps.
+-> Arraylists enable us to add or remove elements which a normal array can't. (import java.util.ArrayList;)
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -99,6 +100,7 @@ public class Car
 Syntax: data_type[] name; 
         data_type[] name={element1,element2};
 	data_type[][] name={{element11,elements12},{element21,element22}};
+	
 	Eg:
 	int[][] numlist={{1,2,3},{4,5,6,7,8}};
 	String[] housetype={"Flat","Bungalow"};
@@ -109,3 +111,21 @@ Syntax: data_type[] name;
 	for(String i:housetype) //'For each' i in string housetype.
 	{ print(i);
 	}
+	
+--------------
+(7) ArrayLists:
+--------------	
+Syntax: ArrayList<type> varname = new ArrayList<type>();
+Eg: ArrayList<int> numberlist = new ArrayList<int>();
+    numberlist.add(55); //55
+    numberlist.add(33); //55,33
+    numberlist.remove(0); //remove 55 at index 0.
+    numberlist.set(0,23); //set 23 at index 0.
+    numberlist.clear; //removes all elements in numberlist ArrayList.
+    numberlist.size(); //returns number of elements in the numberlist ArrayList.
+    hence a loop example would look like:
+    for(int i=0; i<numberlist.size(); i++) { System.out.print(Numberlist.get(i)); } //get is used to display //getter.
+    
+    
+
+	
