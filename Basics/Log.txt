@@ -148,6 +148,7 @@ Syntax: data_type[] name;
 --------------
 (7) ArrayLists:
 --------------	
+import java.util.ArrayList;
 Syntax: ArrayList<type> varname = new ArrayList<type>();
 Eg: ArrayList<int> numberlist = new ArrayList<int>();
     numberlist.add(55); //55
@@ -161,6 +162,25 @@ Eg: ArrayList<int> numberlist = new ArrayList<int>();
     import java.util.Collections;
     Collections.sort(numberlist); //Sort 
     for(String i:cars) { print(i); }
+    
+---------------
+(7) LinkedLists:
+---------------	    
+import java.util.LinkedList;
+Syntax: LinkedList<type> name = new LinkedList<type>();
+    Eg: LinkedList<String> nums=new LinkedList<String>();
+			    nums.add("Good");
+			    nums.addFirst("Hello");
+			    nums.addLast("World");
+			    System.out.print(nums); //[Hello, Good, World]
+			    
+			    //Considering another LinkedList:
+			    LinkedList<String> nums2=new LinkedList<String>();
+			    nums2.add("Nice"); nums2.add("to"); nums2.add("meet"); nums2.add("you");
+			    //Adding it with First LinkedList:
+			    nums.addAll(nums2);
+			    System.out.print(nums+" "+nums2); //print appended List and second LinkedList.
+	                    //[Hello, Good, World, Nice, to, meet, you] [Nice, to, meet, you]
     
     
     
