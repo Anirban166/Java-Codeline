@@ -80,6 +80,20 @@ public class Car
   }
 }
 
+class Book {  
+int id;  
+String name,author,publisher;  
+int quantity;  
+public Book(int id, String name, String author, String publisher, int quantity) //using this pointer.
+{  
+    this.id = id;  
+    this.name = name;  
+    this.author = author;  
+    this.publisher = publisher;  
+    this.quantity = quantity;  
+}  
+} 
+
 ----------
 (5) Maths:
 ----------
@@ -175,6 +189,7 @@ Syntax: LinkedList<type> name = new LinkedList<type>();
 			    nums.addLast("World");
 			    System.out.print(nums); //[Hello, Good, World]
 			    
+			    (1) Linked List appending:
 			    //Considering another LinkedList:
 			    LinkedList<String> nums2=new LinkedList<String>();
 			    nums2.add("Nice"); nums2.add("to"); nums2.add("meet"); nums2.add("you");
@@ -182,6 +197,14 @@ Syntax: LinkedList<type> name = new LinkedList<type>();
 			    nums.addAll(nums2);
 			    System.out.print(nums+" "+nums2); //print appended List and second LinkedList.
 	                    //[Hello, Good, World, Nice, to, meet, you] [Nice, to, meet, you]
+			    
+			    (2) Printing in reverse:
+			    import java.util.Iterator;
+			    LinkedList<String> notun=new LinkedList<String>(); 
+			    notun.add("K"); notun.add("Bye"); //KBye
+			    Iterator<String> i=notun.descendingIterator();
+			    while(i.hasNext()) 
+			    { System.out.print(i.next()); } //ByeK
     
     
     
