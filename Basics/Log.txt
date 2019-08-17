@@ -21,6 +21,7 @@
    //getter: public int getTip() { return x; } //getter format: public return type get'varname'() ; with initial letter in caps.
    //setter: void setTip(int newtip) { this.tip=newtip; } //setter format: void set'varname'(return type new'varname') ; initial caps.
 -> Arraylists enable us to add or remove elements which a normal array can't. (import java.util.ArrayList;)
+-> <E> stands for element, represents any type of object. 
 ----------------------
 (2) Methods/Functions:
 ----------------------
@@ -102,6 +103,7 @@ Syntax: data_type[] name;
 	data_type[][] name={{element11,elements12},{element21,element22}};
 	
 	Eg:
+	(1) Single Foreach loop print:
 	int[][] numlist={{1,2,3},{4,5,6,7,8}};
 	String[] housetype={"Flat","Bungalow"};
 	print(housetype.length+housetype[0]); //2Flat
@@ -111,6 +113,37 @@ Syntax: data_type[] name;
 	for(String i:housetype) //'For each' i in string housetype.
 	{ print(i);
 	}
+	
+	(2)Using deepToString(arrayname) method for printing any mutlidimensional array:
+	import java.util.*;
+        public class xyz
+        {
+        public static void main(String[] args)
+        {
+        int[][] array = {{1, 2, 3, 4}, {5, 6, 7, 8}};
+        System.out.println(Arrays.deepToString(array)); //prints array as it is.
+        } 
+        }
+	//returns {{1, 2, 3, 4}, {5, 6, 7, 8}}
+	
+	(3) Using Nested Foreach loop:
+	Let our considered array be:
+	int[][] arr={{1,2,3},{4,5,6,7}};
+	
+	for(int[] newarr : arr)
+	{ for(int newarr2 : newarr)
+	  { System.out.print(newarr2+" ");
+	  } System.out.println(); //or \n
+	} 
+	//returns : 1 2 3
+	            4 5 6 7  
+		    
+        (4) Using toString() method:
+	for (int[] val : arr) 
+        {  System.out.println(Arrays.toString(val));
+        }
+	//returns : [1, 2, 3]
+	            [4, 5, 6, 7]
 	
 --------------
 (7) ArrayLists:
@@ -124,7 +157,11 @@ Eg: ArrayList<int> numberlist = new ArrayList<int>();
     numberlist.clear; //removes all elements in numberlist ArrayList.
     numberlist.size(); //returns number of elements in the numberlist ArrayList.
     hence a loop example would look like:
-    for(int i=0; i<numberlist.size(); i++) { System.out.print(Numberlist.get(i)); } //get is used to display //getter.
+    for(int i=0; i<numberlist.size(); i++) { System.out.print(numberlist.get(i)); } //get is used to display //getter.
+    import java.util.Collections;
+    Collections.sort(numberlist); //Sort 
+    for(String i:cars) { print(i); }
+    
     
     
 
