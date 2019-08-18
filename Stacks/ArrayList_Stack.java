@@ -49,5 +49,5 @@ public class StackArrayList
     public int peek() 
     {
         return stackList.get(stackList.size() - 1);
-    }
+    } 
 }
