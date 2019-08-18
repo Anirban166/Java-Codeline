@@ -1,4 +1,5 @@
-Import ArrayList from utils | LIFO ArrayList
+// LIFO ArrayList
+Import java.util.ArrayList; 
 
 public class StackArrayList 
 {
