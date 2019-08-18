@@ -42,4 +42,4 @@ public class SelectionSortAlgo
 		} 
 	    System.out.println();   
 	}
-}
+} 
