@@ -23,7 +23,11 @@
    //setter: void setTip(int newtip) { this.tip=newtip; } //setter format: void set'varname'(return type new'varname') ; initial caps.
 -> Arraylists enable us to add or remove elements which a normal array can't. (import java.util.ArrayList;)
 -> <E> stands for element, represents any type of object. 
-----------------------
+-> Import java.util.Scanner
+Scanner s = new Scanner(System.in);
+        a = s.nextInt();
+        b = s.nextInt();
+---------------------
 (2) Methods/Functions:
 ----------------------
 public class temp 
