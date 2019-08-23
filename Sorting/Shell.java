@@ -1,6 +1,6 @@
 class ShellSort 
 {
-    public static void main(String args[]) 
+    public static void main(String args[])  
     {
         int[] arr = new int[] {35,51,22,7,1};
         System.out.println("Array before sorting is:");
