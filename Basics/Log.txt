@@ -46,7 +46,7 @@ public class temp
 	public static void main(String args[])
 	{	myfunc("hi"); //simple function call.
 	}
-}
+} 
 ------------
 (3) Strings:
 ------------
