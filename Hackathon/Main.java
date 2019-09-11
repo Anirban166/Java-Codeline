@@ -36,3 +36,4 @@ public class Main
 		System.out.println("Paraphrasing Finished in " + (end-begin)/1000.0 + " seconds");
 	}
 }
+ 
