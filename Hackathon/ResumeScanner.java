@@ -1,10 +1,7 @@
+import java.util.*;
+import java.io.*;
 
-import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
-public class Main
+public class ResumeScanner
 {
 	public static void main(String[] args)
 	{
@@ -15,42 +12,19 @@ public class Main
 		
 		System.out.println("Please enter your output file:");
 		FileGenerator.outputName = input.next();
+		/*
+		 File file = 
+      new File("C:\\Users\\pankaj\\Desktop\\test.txt"); 
+    Scanner sc = new Scanner(file); 
+  
+    while (sc.hasNextLine()) 
+      System.out.println(sc.nextLine()); */
 		
 		input.close();
-		
-		ExecutorService threads = Executors.newFixedThreadPool(2);
-		long begin = System.currentTimeMillis();
-		threads.execute(new FileGenerator());
-		threads.shutdown();
-		try
-		{
-			threads.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS);
-		}
-		catch (InterruptedException e) 
-		{
-			System.out.println(e.getMessage());
-		}
-		long end = System.currentTimeMillis();
-		
-		System.out.println("Paraphrasing Finished in " + (end-begin)/1000.0 + " seconds");
 	}
 }
 ---------------------------------
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Scanner;
-import java.util.concurrent.ConcurrentHashMap;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 public class FileGenerator implements Runnable
 {
@@ -147,73 +121,7 @@ public class FileGenerator implements Runnable
 				}
 			}
 		} 
-		catch (FileNotFoundException e)
-		{
-			System.out.println(e.getMessage());
-		} 
-		catch (IOException e)
-		{
-			System.out.println(e.getMessage());
-		}
+		
 	}
 
-
-	// method to analyze the current word and replace it with a random synonym
-	private static String getSynonym() throws IOException
-	{
-		String result = originalWords.remove();
-		
-		// recording previous state such as capital letters
-		boolean capital = Character.isUpperCase(result.charAt(0));
-		
-		// section on replacing with possible synonyms
-		List<String> sysnonymsList = new ArrayList<>();
-		
-		// checking if current word has already been recorded
-		// this is done to improve performance and avoid making request for already encountered words
-		if (table.containsKey(result))
-		{
-			// get the list of the synonyms already collected for this word
-			sysnonymsList = table.get(result);
-		}
-		else
-		{
-			// if word is unique make a new request
-			// utilizing data from public thesaurus 
-			String url = "http://www.thesaurus.com/browse/" + result;
-			Document document = Jsoup.connect(url).userAgent("Mozilla").get();
-			Elements content = document.getElementsByClass("css-1lc0dpe et6tpn80");
-			
-			// collecting the synonyms from the page
-			for (Element current : content)
-			{
-				sysnonymsList.add(current.text());
-			}
-			
-			// saving this record into our table
-			table.put(result, sysnonymsList);
-		}
-		
-		// either leaving the original in place or selecting a random synonym
-		if (sysnonymsList.size() > 0)
-		{
-			int random = (int) (Math.random() * sysnonymsList.size());
-			result = sysnonymsList.get(random);
-		}
-		
-		// check capital letter signal
-		if (capital)
-		{
-			result = result.substring(0,1).toUpperCase() + result.substring(1);
-		}
-		
-		return result;
-	}
-
-	@Override
-	public void run()
-	{
-		readFile();
-		writeFile();
-	}
 }
