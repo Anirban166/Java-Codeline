@@ -2,7 +2,7 @@ class Spiral
   {   public static void main(String args[])
         {   int n=5;
         	for(int i=0;i<n;i++)
-        	{ for(int j=0;j<n;j++)
+        	{ for(int j=0;j<n;j++) 
         	  {  int w=1,x=1+w,y=x+w,z=w+y,c=z;
         	  
         	      //filling positions thereafter according to matrix positions:
