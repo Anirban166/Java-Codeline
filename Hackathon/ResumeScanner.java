@@ -1,4 +1,4 @@
-/** To be updated after Hackathon ends.
+/** Basic Idea:
 
 			while (reader.hasNextLine())
 			{
