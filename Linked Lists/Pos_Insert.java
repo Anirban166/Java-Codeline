@@ -1,6 +1,6 @@
 Node InsertNth(Node head, int data, int position) 
 {
-    Node newNode = new Node();
+    Node newNode = new Node(data);
     newNode.data = data;
     
     if (position == 0) {
