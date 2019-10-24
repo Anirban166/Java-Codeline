@@ -9,7 +9,7 @@ public class Radio
 	static int quit;
  
     Radio()
-    {
+    { 
       power="OFF"; channel=0; volume=0; quit=0;
     }
    
